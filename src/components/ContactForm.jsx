@@ -35,6 +35,7 @@ const ContactForm = () => {
             className="w-full max-w-lg flex flex-col gap-8"
             ref={form}
             onSubmit={handleSubmit}
+            aria-label="Contact form"
         >
             <div className="flex flex-col gap-2">
                 <label htmlFor="name">Name</label>
@@ -43,6 +44,7 @@ const ContactForm = () => {
                     type="text"
                     id="name"
                     name="name"
+                    aria-label="Name"
                     required
                 />
             </div>
@@ -53,6 +55,7 @@ const ContactForm = () => {
                     type="email"
                     id="email"
                     name="email"
+                    aria-label="E-mail"
                     required
                 />
             </div>
@@ -63,6 +66,7 @@ const ContactForm = () => {
                     name="message"
                     id="message"
                     rows="5"
+                    aria-label="Message"
                     required
                 ></textarea>
             </div>

@@ -29,7 +29,10 @@ export default function Portfolio() {
                     Explore some of the projects I have worked on in the past.
                 </p>
 
-                <div className="w-full flex flex-col items-center gap-8">
+                <div
+                    className="w-full flex flex-col items-center gap-8"
+                    aria-label="Portfolio"
+                >
                     {(() => {
                         if (Array.isArray(data) && data.length > 0) {
                             return data.map((project) => (

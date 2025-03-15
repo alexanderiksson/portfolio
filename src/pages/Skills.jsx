@@ -24,7 +24,10 @@ export default function Skills() {
             </Helmet>
 
             <div className="content">
-                <section className="grid grid-cols-2 md:grid-cols-5 gap-x-12 gap-y-24">
+                <section
+                    className="grid grid-cols-2 md:grid-cols-5 gap-x-12 gap-y-24"
+                    aria-label="Skills"
+                >
                     {data.map((skill) => (
                         <Skill
                             key={skill.fields.name}

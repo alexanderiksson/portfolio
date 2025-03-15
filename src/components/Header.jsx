@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import HamburgerIcon from "../assets/img/hamburger.svg";
 import CloseIcon from "../assets/img/close.svg";
 
 const Navbar = () => {
     return (
-        <nav className="hidden sm:block py-4 px-10 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5">
+        <nav
+            className="hidden sm:block py-4 px-10 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5"
+            aria-label="Main navigation"
+        >
             <ul className="flex justify-center gap-16">
                 <li>
                     <NavLink to="/">Home</NavLink>
@@ -44,6 +47,7 @@ const Header = () => {
                         width="40"
                         onClick={toggleMenu}
                         className="cursor-pointer"
+                        role="button"
                     />
                 </div>
             </header>
@@ -56,8 +60,9 @@ const Header = () => {
                     width="25"
                     onClick={toggleMenu}
                     className="cursor-pointer"
+                    role="button"
                 />
-                <nav className="mt-10">
+                <nav className="mt-10" aria-label="Mobile navigation">
                     <ul className="flex flex-col gap-10">
                         <li>
                             <NavLink onClick={toggleMenu} to="/">

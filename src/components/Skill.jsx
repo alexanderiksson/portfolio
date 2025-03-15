@@ -2,7 +2,7 @@ import React from "react";
 
 const Skill = ({ icon, label, progress }) => {
     return (
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4" aria-label={label}>
             <img
                 src={`https:${icon?.fields?.file?.url}`}
                 alt={label}
