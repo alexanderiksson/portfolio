@@ -1,6 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1.2, staggerChildren: 0.2 },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+};
 
 export default function Home() {
     return (
@@ -10,20 +25,36 @@ export default function Home() {
             </Helmet>
 
             <div className="content">
-                <section className="w-full flex flex-col justify-center items-center text-center gap-10">
-                    <h1 className="text-4xl sm:text-5xl">Alexander Eriksson</h1>
-                    <p className="text-base sm:text-xl">
+                <motion.section
+                    className="w-full flex flex-col justify-center items-center text-center gap-10"
+                    initial="hidden"
+                    animate="visible"
+                    variants={containerVariants}
+                >
+                    <motion.h1
+                        className="text-4xl sm:text-5xl"
+                        variants={itemVariants}
+                    >
+                        Alexander Eriksson
+                    </motion.h1>
+                    <motion.p
+                        className="text-base sm:text-xl"
+                        variants={itemVariants}
+                    >
                         Frontend Developer, Stockholm
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    </motion.p>
+                    <motion.div
+                        className="flex flex-col sm:flex-row gap-4"
+                        variants={itemVariants}
+                    >
                         <Link className="button" to="/contact">
                             Contact me
                         </Link>
                         <Link className="button" to="/portfolio">
                             Portfolio
                         </Link>
-                    </div>
-                </section>
+                    </motion.div>
+                </motion.section>
             </div>
         </React.Fragment>
     );
