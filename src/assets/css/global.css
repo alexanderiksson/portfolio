@@ -211,14 +211,15 @@ nav a.active {
 #dropdown {
     position: fixed;
     height: 100vh;
-    width: 12rem;
+    width: 100%;
     padding: 1.5rem 2rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px);
+    background-color: rgba(76, 76, 76, 0.1);
+    backdrop-filter: blur(100px);
     right: -100%;
-    transition: all 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.25s;
+    transition-timing-function: ease-in-out;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    z-index: 100;
 }
 
 .progress-bar {
