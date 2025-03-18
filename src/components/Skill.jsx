@@ -17,9 +17,9 @@ const Skill = ({ icon, label, progress, variants }) => {
 
             <p className="font-semibold">{label}</p>
 
-            <div className="w-3/4 bg-slate-200 h-1 rounded">
+            <div className="w-4/5 bg-slate-200 h-1.5 rounded-full">
                 <div
-                    className="progress-bar h-full rounded"
+                    className="progress-bar h-full rounded-full"
                     style={{ width: `${progress}%` }}
                     role="progressbar"
                     aria-valuenow={parseInt(progress, 10)}

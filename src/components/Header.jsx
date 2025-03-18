@@ -41,16 +41,11 @@ const Header = () => {
 
                 {/* Hamburger menu */}
                 <div
-                    className="block sm:hidden mr-4 p-3 bg-white bg-opacity-10 backdrop-blur-2xl rounded-full shadow-xl border border-white border-opacity-5"
+                    className="block sm:hidden mr-4 p-2 bg-white bg-opacity-10 backdrop-blur-2xl rounded-full shadow-xl border border-white border-opacity-5"
                     onClick={toggleMenu}
                     role="button"
                 >
-                    <img
-                        src={HamburgerIcon}
-                        alt="menu"
-                        width="38"
-                        className="cursor-pointer"
-                    />
+                    <img src={HamburgerIcon} alt="menu" width="32" />
                 </div>
             </header>
 

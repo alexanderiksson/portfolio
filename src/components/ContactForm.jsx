@@ -34,7 +34,7 @@ const ContactForm = () => {
 
     return (
         <motion.form
-            className="w-full max-w-lg flex flex-col gap-8"
+            className="w-full max-w-xl flex flex-col gap-8"
             ref={form}
             onSubmit={handleSubmit}
             aria-label="Contact form"
@@ -70,7 +70,7 @@ const ContactForm = () => {
                     className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
                     name="message"
                     id="message"
-                    rows="5"
+                    rows="6"
                     aria-label="Message"
                     required
                 ></textarea>

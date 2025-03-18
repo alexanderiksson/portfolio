@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 const PortfolioCard = ({ project, variants }) => {
     return (
         <motion.div
-            className="bg-white bg-opacity-5 rounded-lg p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full shadow-xl border border-white border-opacity-10"
+            className="bg-white bg-opacity-5 rounded-lg p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full shadow-xl border border-white border-opacity-10"
             variants={variants}
         >
             <div className="flex justify-center items-center w-full md:w-1/2">
                 <img
                     src={`https:${project?.fields?.image?.fields?.file?.url}`}
                     alt={`Image for ${project.fields.title}`}
-                    className="w-4/5"
+                    className="w-full lg:w-4/5"
                     loading="lazy"
                 />
             </div>
@@ -26,7 +26,7 @@ const PortfolioCard = ({ project, variants }) => {
                     {project.fields.tags.map((tag) => (
                         <span
                             key={tag.fields.name}
-                            className="flex items-center gap-1 bg-white bg-opacity-10 shadow-md py-1 px-2.5 rounded-full text-xs"
+                            className="flex items-center gap-1 bg-white bg-opacity-10 shadow-md py-1 px-2.5 rounded-full text-xs border border-white border-opacity-5"
                         >
                             {tag.fields.icon && (
                                 <img
