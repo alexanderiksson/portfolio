@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "../animations/fast";
 
 const ContactForm = () => {
     const form = useRef();
@@ -31,56 +33,61 @@ const ContactForm = () => {
     };
 
     return (
-        <form
+        <motion.form
             className="w-full max-w-lg flex flex-col gap-8"
             ref={form}
             onSubmit={handleSubmit}
             aria-label="Contact form"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
         >
-            <div className="flex flex-col gap-2">
+            <motion.div className="flex flex-col gap-2" variants={itemVariants}>
                 <label htmlFor="name">Name</label>
                 <input
-                    className="p-2 rounded-sm bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
+                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
                     type="text"
                     id="name"
                     name="name"
                     aria-label="Name"
                     required
                 />
-            </div>
-            <div className="flex flex-col gap-2">
+            </motion.div>
+            <motion.div className="flex flex-col gap-2" variants={itemVariants}>
                 <label htmlFor="email">E-mail</label>
                 <input
-                    className="p-2 rounded-sm bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
+                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
                     type="email"
                     id="email"
                     name="email"
                     aria-label="E-mail"
                     required
                 />
-            </div>
-            <div className="flex flex-col gap-2">
+            </motion.div>
+            <motion.div className="flex flex-col gap-2" variants={itemVariants}>
                 <label htmlFor="message">Message</label>
                 <textarea
-                    className="p-2 rounded-sm bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
+                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
                     name="message"
                     id="message"
                     rows="5"
                     aria-label="Message"
                     required
                 ></textarea>
-            </div>
+            </motion.div>
 
             {alert && (
                 <p
-                    className={`${alertStyle} w-full p-2 bg-opacity-30 backdrop-blur-lg rounded-sm text-center`}
+                    className={`${alertStyle} w-full p-2 bg-opacity-30 backdrop-blur-lg rounded text-center border border-white border-opacity-10`}
                 >
                     {alert}
                 </p>
             )}
 
-            <button className="button">Send</button>
-        </form>
+            <motion.button className="button" variants={itemVariants}>
+                Send
+            </motion.button>
+        </motion.form>
     );
 };
 

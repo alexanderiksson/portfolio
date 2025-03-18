@@ -1,8 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Skill = ({ icon, label, progress }) => {
+const Skill = ({ icon, label, progress, variants }) => {
     return (
-        <div className="flex flex-col items-center gap-4" aria-label={label}>
+        <motion.div
+            className="flex flex-col items-center gap-4"
+            variants={variants}
+            aria-label={label}
+        >
             <img
                 src={`https:${icon?.fields?.file?.url}`}
                 alt={label}
@@ -22,7 +27,7 @@ const Skill = ({ icon, label, progress }) => {
                     aria-valuemax="100"
                 ></div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

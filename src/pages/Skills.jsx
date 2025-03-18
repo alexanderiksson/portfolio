@@ -4,6 +4,8 @@ import Skill from "../components/Skill";
 import useContentful from "../hooks/useContentful";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "../animations/fast";
 
 export default function Skills() {
     const { data, loading, error } = useContentful("skills", {
@@ -24,9 +26,12 @@ export default function Skills() {
             </Helmet>
 
             <div className="content">
-                <section
+                <motion.section
                     className="grid grid-cols-2 md:grid-cols-5 gap-x-12 gap-y-24"
                     aria-label="Skills"
+                    initial="hidden"
+                    animate="visible"
+                    variants={containerVariants}
                 >
                     {data.map((skill) => (
                         <Skill
@@ -34,9 +39,10 @@ export default function Skills() {
                             icon={skill.fields.icon}
                             label={skill.fields.name}
                             progress={skill.fields.progress}
+                            variants={itemVariants}
                         />
                     ))}
-                </section>
+                </motion.section>
             </div>
         </React.Fragment>
     );
