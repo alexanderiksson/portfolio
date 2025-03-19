@@ -45,7 +45,7 @@ const ContactForm = () => {
             <motion.div className="flex flex-col gap-2" variants={itemVariants}>
                 <label htmlFor="name">Name</label>
                 <input
-                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
+                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10"
                     type="text"
                     id="name"
                     name="name"
@@ -56,7 +56,7 @@ const ContactForm = () => {
             <motion.div className="flex flex-col gap-2" variants={itemVariants}>
                 <label htmlFor="email">E-mail</label>
                 <input
-                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
+                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10"
                     type="email"
                     id="email"
                     name="email"
@@ -67,7 +67,7 @@ const ContactForm = () => {
             <motion.div className="flex flex-col gap-2" variants={itemVariants}>
                 <label htmlFor="message">Message</label>
                 <textarea
-                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10 shadow-lg"
+                    className="p-2 rounded bg-white bg-opacity-10 border border-white border-opacity-10"
                     name="message"
                     id="message"
                     rows="6"

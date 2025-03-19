@@ -6,7 +6,7 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
     return (
         <nav
-            className="hidden sm:block py-4 px-10 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5"
+            className="hidden sm:block py-4 px-16 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5"
             aria-label="Main navigation"
         >
             <ul className="flex justify-center gap-16">
