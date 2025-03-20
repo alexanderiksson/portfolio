@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import PortfolioCard from "../components/PortfolioCard";
 import useContentful from "../hooks/useContentful";
@@ -20,7 +19,7 @@ export default function Portfolio() {
     }
 
     return (
-        <React.Fragment>
+        <>
             <Helmet>
                 <title>Portfolio - Alexander Eriksson</title>
             </Helmet>
@@ -53,6 +52,6 @@ export default function Portfolio() {
                     })()}
                 </motion.div>
             </div>
-        </React.Fragment>
+        </>
     );
 }

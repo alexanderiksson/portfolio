@@ -1,5 +1,3 @@
-import React from "react";
-
 const Error = ({ msg = "Something went wrong..." }) => {
     return (
         <div className="content">

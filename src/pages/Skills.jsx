@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import Skill from "../components/Skill";
 import useContentful from "../hooks/useContentful";
@@ -20,7 +19,7 @@ export default function Skills() {
     }
 
     return (
-        <React.Fragment>
+        <>
             <Helmet>
                 <title>Skills - Alexander Eriksson</title>
             </Helmet>
@@ -44,6 +43,6 @@ export default function Skills() {
                     ))}
                 </motion.section>
             </div>
-        </React.Fragment>
+        </>
     );
 }

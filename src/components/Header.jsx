@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import HamburgerIcon from "../assets/img/hamburger.svg";
 import MobileNav from "./MobileNav";
@@ -6,7 +6,7 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
     return (
         <nav
-            className="hidden sm:block py-4 px-16 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5"
+            className="hidden sm:block py-4 px-12 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5"
             aria-label="Main navigation"
         >
             <ul className="flex justify-center gap-16">
@@ -31,11 +31,11 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen((open) => !open);
+        setIsOpen((isOpen) => !isOpen);
     };
 
     return (
-        <React.Fragment>
+        <>
             <header className="flex justify-end sm:justify-center py-4 sm:py-6 fixed w-full">
                 <Navbar />
 
@@ -50,7 +50,7 @@ const Header = () => {
             </header>
 
             <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
-        </React.Fragment>
+        </>
     );
 };
 

@@ -5,13 +5,13 @@ import Loader from "../components/Loader";
 
 export default function Layout() {
     return (
-        <React.Fragment>
+        <>
             <Header />
             <main role="main" aria-labelledby="main-content">
                 <React.Suspense fallback={<Loader />}>
                     <Outlet />
                 </React.Suspense>
             </main>
-        </React.Fragment>
+        </>
     );
 }

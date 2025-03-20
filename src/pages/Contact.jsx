@@ -1,12 +1,9 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
-import GithubIcon from "../assets/img/github.svg";
-import LinkedinIcon from "../assets/img/linkedin.svg";
 import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
     return (
-        <React.Fragment>
+        <>
             <Helmet>
                 <title>Contact me - Alexander Eriksson</title>
             </Helmet>
@@ -22,6 +19,6 @@ export default function Contact() {
                     <ContactForm />
                 </div>
             </div>
-        </React.Fragment>
+        </>
     );
 }

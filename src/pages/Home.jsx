@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -6,7 +5,7 @@ import { containerVariants, itemVariants } from "../animations/default";
 
 export default function Home() {
     return (
-        <React.Fragment>
+        <>
             <Helmet>
                 <title>Home - Alexander Eriksson</title>
             </Helmet>
@@ -43,6 +42,6 @@ export default function Home() {
                     </motion.div>
                 </motion.section>
             </div>
-        </React.Fragment>
+        </>
     );
 }
