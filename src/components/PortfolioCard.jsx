@@ -11,7 +11,7 @@ const PortfolioCard = ({ project, variants }) => {
                 <img
                     src={`https:${project?.fields?.image?.fields?.file?.url}`}
                     alt={`Image for ${project.fields.title}`}
-                    className="w-full lg:w-4/5"
+                    className="max-w-full max-h-80 lg:max-w-4/5"
                     loading="lazy"
                 />
             </div>
