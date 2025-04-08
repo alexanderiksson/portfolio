@@ -27,7 +27,7 @@ export default function Portfolio() {
             <div className="content">
                 <h1 className="page-title">Portfolio</h1>
                 <p className="page-description">
-                    Explore some of the projects I have worked on in the past.
+                    Take a stroll through a few of my past projects.
                 </p>
 
                 <motion.div

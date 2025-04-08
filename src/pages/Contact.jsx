@@ -11,8 +11,7 @@ export default function Contact() {
             <div className="content">
                 <h1 className="page-title">Contact me</h1>
                 <p className="page-description">
-                    Please feel free to reach out to me if you have any
-                    questions.
+                    Any questions? Just give me a shout!
                 </p>
 
                 <div className="w-full flex flex-col justify-center items-center">
