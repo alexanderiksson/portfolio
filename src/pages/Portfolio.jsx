@@ -39,9 +39,9 @@ export default function Portfolio() {
                 >
                     {(() => {
                         if (Array.isArray(data) && data.length > 0) {
-                            return data.map((project) => (
+                            return data.map((project, index) => (
                                 <PortfolioCard
-                                    key={project.fields.title}
+                                    key={index}
                                     project={project}
                                     variants={itemVariants}
                                 />
