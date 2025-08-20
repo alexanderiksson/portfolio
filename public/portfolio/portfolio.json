@@ -1,0 +1,73 @@
+[
+    {
+        "title": "Wordpress Website",
+        "tags": [
+            {
+                "name": "Wordpress"
+            },
+            {
+                "name": "Tailwind"
+            },
+            {
+                "name": "PHP"
+            }
+        ],
+        "text": "WordPress site I built for a small business. Designed the theme from scratch with a focus on modern design and solid performance.",
+        "link": "/",
+        "img": "/portfolio/images/wp-screenshot.png"
+    },
+    {
+        "title": "Crypto App",
+        "tags": [
+            {
+                "name": "Vue"
+            },
+            {
+                "name": "Tailwind"
+            }
+        ],
+        "text": "A school project where I built a cryptocurrency price tracker using Vue.",
+        "link": "https://github.com/alexanderiksson/crypto-app",
+        "img": "/portfolio/images/crypto-app-screenshot.png"
+    },
+    {
+        "title": "Workout Tracker",
+        "tags": [
+            {
+                "name": "React"
+            },
+            {
+                "name": "TypeScript"
+            },
+            {
+                "name": "Tailwind"
+            }
+        ],
+        "text": "A workout tracker that i worked on as a sideproject to improve my skills in React and TypeScript.",
+        "link": "https://github.com/alexanderiksson/workout-tracker",
+        "img": "/portfolio/images/workout-tracker.png"
+    },
+    {
+        "title": "Social Media App",
+        "tags": [
+            {
+                "name": "React"
+            },
+            {
+                "name": "TypeScript"
+            },
+            {
+                "name": "Tailwind"
+            },
+            {
+                "name": "Express"
+            },
+            {
+                "name": "PostgreSQL"
+            }
+        ],
+        "text": "This is a school project I developed as part of a full-stack development course. It’s a fully functional social media application built with React for the frontend and Express for the backend.",
+        "link": "https://github.com/alexanderiksson/iths-fullstack",
+        "img": "/portfolio/images/socialmedia.png"
+    }
+]

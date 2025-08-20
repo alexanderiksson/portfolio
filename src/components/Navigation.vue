@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="fixed left-0 top-0 bottom-0 w-52 flex flex-col justify-between gap-8 py-16 px-12"
+        class="fixed left-0 top-0 bottom-0 w-52 flex flex-col justify-between gap-8 pt-20 pb-8 px-12"
     >
         <NuxtLink to="/" class="text-2xl">Alexander Eriksson</NuxtLink>
 

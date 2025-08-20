@@ -1,6 +1,6 @@
 <script setup>
 useSeoMeta({
-    title: "Nuxt Site - Home",
+    title: "Alexander Eriksson - Home",
     description: "Website built using nuxt.js and tailwind css.",
 });
 </script>
@@ -10,10 +10,10 @@ useSeoMeta({
         <section id="intro" class="flex flex-col gap-8 mb-24">
             <h1 class="text-4xl font-medium">
                 <div class="flex gap-2 items-center mb-4">
+                    <span class="text-neutral-500">Hello</span>
                     <div>
                         <img src="/wavinghand.png" width="36px" height="36px" />
                     </div>
-                    <span class="text-neutral-500">Hello,</span>
                 </div>
                 i'm Alexander Eriksson. Fullstack developer from Stockholm.
             </h1>
@@ -23,9 +23,9 @@ useSeoMeta({
             </div>
         </section>
 
-        <section id="skills" class="bg-slate-300 p-6 rounded-3xl">
-            <h2 class="text-2xl font-medium mb-6">Techstack</h2>
-            <div class="flex justify-between">
+        <section id="skills" class="bg-neutral-200 p-8 rounded-3xl">
+            <h2 class="text-2xl font-medium mb-8">Techstack</h2>
+            <div class="grid grid-cols-6 gap-x-4 gap-y-12">
                 <div title="HTML">
                     <Icon icon="flowbite:html-solid" width="24" height="24" />
                 </div>
@@ -39,12 +39,6 @@ useSeoMeta({
                         height="24"
                     />
                 </div>
-                <div title="React">
-                    <Icon icon="uim:react" width="24" height="24" />
-                </div>
-                <div title="Vue">
-                    <Icon icon="flowbite:vue-solid" width="24" height="24" />
-                </div>
                 <div title="TypeScript">
                     <Icon
                         icon="mdi:language-typescript"
@@ -52,6 +46,13 @@ useSeoMeta({
                         height="24"
                     />
                 </div>
+                <div title="React">
+                    <Icon icon="uim:react" width="24" height="24" />
+                </div>
+                <div title="Vue">
+                    <Icon icon="flowbite:vue-solid" width="24" height="24" />
+                </div>
+
                 <div title="Tailwind CSS">
                     <Icon
                         icon="flowbite:tailwind-solid"
