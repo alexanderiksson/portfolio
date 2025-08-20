@@ -15,7 +15,7 @@ useSeoMeta({
                         <img src="/wavinghand.png" width="36px" height="36px" />
                     </div>
                 </div>
-                i'm Alexander Eriksson. Fullstack developer from Stockholm.
+                I'm Alexander Eriksson, Fullstack developer from Stockholm.
             </h1>
             <div class="flex gap-2">
                 <NuxtLink class="button">Portfolio</NuxtLink>
@@ -33,18 +33,10 @@ useSeoMeta({
                     <Icon icon="flowbite:css-solid" width="24" height="24" />
                 </div>
                 <div title="JavaScript">
-                    <Icon
-                        icon="mdi:language-javascript"
-                        width="24"
-                        height="24"
-                    />
+                    <Icon icon="mdi:language-javascript" width="24" height="24" />
                 </div>
                 <div title="TypeScript">
-                    <Icon
-                        icon="mdi:language-typescript"
-                        width="24"
-                        height="24"
-                    />
+                    <Icon icon="mdi:language-typescript" width="24" height="24" />
                 </div>
                 <div title="React">
                     <Icon icon="uim:react" width="24" height="24" />
@@ -54,11 +46,7 @@ useSeoMeta({
                 </div>
 
                 <div title="Tailwind CSS">
-                    <Icon
-                        icon="flowbite:tailwind-solid"
-                        width="24"
-                        height="24"
-                    />
+                    <Icon icon="flowbite:tailwind-solid" width="24" height="24" />
                 </div>
                 <div title="Wordpress">
                     <Icon icon="mdi:wordpress" width="24" height="24" />

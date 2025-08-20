@@ -1,22 +1,5 @@
 [
     {
-        "title": "Wordpress Website",
-        "tags": [
-            {
-                "name": "Wordpress"
-            },
-            {
-                "name": "Tailwind"
-            },
-            {
-                "name": "PHP"
-            }
-        ],
-        "text": "WordPress site I built for a small business. Designed the theme from scratch with a focus on modern design and solid performance.",
-        "link": "/",
-        "img": "/portfolio/images/wp-screenshot.png"
-    },
-    {
         "title": "Crypto App",
         "tags": [
             {
