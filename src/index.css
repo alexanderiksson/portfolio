@@ -2,8 +2,9 @@
 @import "tailwindcss";
 
 :root {
-    --background: #000000;
-    --text: #f8f8f8;
+    --background: #ffffff;
+    --text: #000000;
+    --primary: #5857ff;
 }
 
 body {
@@ -15,7 +16,24 @@ body {
 }
 
 .content {
-    max-width: 1200px;
+    max-width: 800px;
     width: 90%;
     margin: auto;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    opacity: 0.8;
 }
