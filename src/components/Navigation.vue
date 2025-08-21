@@ -33,7 +33,7 @@ const toggleMenu = () => {
     </nav>
 
     <!-- Mobile nav -->
-    <header class="md:hidden content flex justify-between items-center py-4">
+    <header class="md:hidden content flex justify-between items-center py-6">
         <NuxtLink to="/" class="text-2xl">AE</NuxtLink>
         <div class="cursor-pointer" @click="toggleMenu">
             <Icon icon="hugeicons:menu-09" width="32" height="32" />
@@ -41,7 +41,7 @@ const toggleMenu = () => {
     </header>
 
     <div
-        class="fixed top-0 h-screen w-screen bg-white z-30 py-4 transition-all duration-200 ease-in-out"
+        class="fixed top-0 h-screen w-screen bg-[var(--background)] z-30 py-6 transition-all duration-300 ease-in-out"
         :style="{ left: isOpen ? '0' : '-110%' }"
     >
         <div class="content">

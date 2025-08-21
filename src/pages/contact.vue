@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
     sending.value = true;
 
     try {
-        const result = await emailjs.send(
+        await emailjs.send(
             "service_w4r7hwo",
             "template_z70d7rw",
             {
@@ -44,12 +44,12 @@ const handleSubmit = async (e) => {
         <h1 class="text-4xl font-medium mb-4">Contact me</h1>
         <p class="mb-12">Any questions? Just give me a shout!</p>
 
-        <section class="bg-neutral-200 p-6 sm:p-8 rounded-3xl">
+        <section class="bg-zinc-900/80 p-6 sm:p-8 rounded-3xl" id="contact-form">
             <form class="flex flex-col gap-8" @submit="handleSubmit">
                 <div class="flex flex-col gap-2">
                     <label for="name">Name</label>
                     <input
-                        class="p-2 rounded-xl border border-black/20 bg-white"
+                        class="p-2 rounded-xl border border-[var(--text)]/10 bg-[var(--background)]/50"
                         type="text"
                         id="name"
                         name="name"
@@ -61,7 +61,7 @@ const handleSubmit = async (e) => {
                 <div class="flex flex-col gap-2">
                     <label for="email">E-mail</label>
                     <input
-                        class="p-2 rounded-xl border border-black/20 bg-white"
+                        class="p-2 rounded-xl border border-[var(--text)]/10 bg-[var(--background)]/50"
                         type="email"
                         id="email"
                         name="email"
@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
                 <div class="flex flex-col gap-2">
                     <label for="message">Message</label>
                     <textarea
-                        class="p-2 rounded-xl border border-black/20 bg-white"
+                        class="p-2 rounded-xl border border-[var(--text)]/10 bg-[var(--background)]/50"
                         name="message"
                         id="message"
                         rows="5"

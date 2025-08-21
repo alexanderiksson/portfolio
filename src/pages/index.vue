@@ -18,12 +18,12 @@ useSeoMeta({
                 I'm Alexander Eriksson, Fullstack developer from Stockholm.
             </h1>
             <div class="flex gap-2">
-                <NuxtLink class="button">Portfolio</NuxtLink>
-                <NuxtLink class="button">Contact me</NuxtLink>
+                <NuxtLink class="button" to="/portfolio">Portfolio</NuxtLink>
+                <NuxtLink class="button" to="/contact">Contact me</NuxtLink>
             </div>
         </section>
 
-        <section id="skills" class="bg-neutral-200 p-8 rounded-3xl">
+        <section id="skills" class="bg-zinc-900/80 p-8 rounded-3xl">
             <h2 class="text-2xl font-medium mb-8">Techstack</h2>
             <div class="grid grid-cols-6 gap-x-4 gap-y-12">
                 <div title="HTML">
@@ -56,6 +56,9 @@ useSeoMeta({
                 </div>
                 <div title="PostgreSQL">
                     <Icon icon="cib:postgresql" width="24" height="24" />
+                </div>
+                <div title="MongoDB">
+                    <Icon icon="flowbite:mongo-db-solid" width="24" height="24" />
                 </div>
                 <div title="Figma">
                     <Icon icon="mage:figma" width="24" height="24" />

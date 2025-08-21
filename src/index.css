@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --text: #000000;
-    --primary: #5857ff;
+    --background: #030206;
+    --text: #f4f4f4;
+    --primary: #484abc;
 }
 
 body {
@@ -33,6 +33,7 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: 0.2s;
+    font-weight: 500;
 }
 
 .button:hover {

@@ -17,7 +17,7 @@ onMounted(async () => {
     <div class="content">
         <h1 class="text-4xl font-medium mb-8">Portfolio</h1>
 
-        <section class="flex flex-col gap-8">
+        <section class="flex flex-col gap-8" id="portfolio">
             <template v-for="post in [...(portfolioData || [])].reverse()">
                 <PortfolioCard :data="post" />
             </template>
