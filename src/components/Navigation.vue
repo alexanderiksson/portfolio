@@ -33,7 +33,9 @@ const toggleMenu = () => {
     </nav>
 
     <!-- Mobile nav -->
-    <header class="md:hidden content flex justify-between items-center py-6">
+    <header
+        class="md:hidden flex justify-between items-center py-4 px-5 fixed w-full top-0 bg-[var(--background)]/80 backdrop-blur-md z-20"
+    >
         <NuxtLink to="/" class="text-2xl">AE</NuxtLink>
         <div class="cursor-pointer" @click="toggleMenu">
             <Icon icon="hugeicons:menu-09" width="32" height="32" />
