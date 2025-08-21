@@ -8,11 +8,11 @@ defineProps({
 </script>
 
 <template>
-    <div class="p-8 flex gap-8 bg-neutral-200 rounded-3xl">
-        <div class="flex justify-center items-center w-1/2">
+    <div class="p-8 flex flex-col sm:flex-row gap-8 bg-neutral-200 rounded-3xl">
+        <div class="flex justify-center items-center sm:w-1/2">
             <img :src="data.img" alt="" class="max-w-full max-h80" />
         </div>
-        <div class="flex flex-col gap-4 w-1/2 relative">
+        <div class="flex flex-col gap-4 sm:w-1/2 relative">
             <h2 class="text-xl font-medium">{{ data.title }}</h2>
             <div class="flex gap-2 flex-wrap">
                 <div
@@ -25,8 +25,8 @@ defineProps({
 
             <p class="mb-16">{{ data.text }}</p>
 
-            <a v-if="data.link" :href="data.link" class="button absolute bottom-0">
-                View on Github
+            <a v-if="data.link" :href="data.link" class="button absolute bottom-0 w-full">
+                View on <Icon icon="mdi:github" width="24" height="24" />
             </a>
         </div>
     </div>

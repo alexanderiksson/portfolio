@@ -8,7 +8,7 @@ useSeoMeta({
 <template>
     <div class="content">
         <section id="intro" class="flex flex-col gap-8 mb-24">
-            <h1 class="text-4xl font-medium">
+            <h1 class="sm:text-4xl text-3xl font-medium">
                 <div class="flex gap-2 items-center mb-4">
                     <span class="text-neutral-500">Hello</span>
                     <div>
