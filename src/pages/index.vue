@@ -1,7 +1,6 @@
 <script setup>
 useSeoMeta({
     title: "Alexander Eriksson - Home",
-    description: "Website built using nuxt.js and tailwind css.",
 });
 </script>
 
