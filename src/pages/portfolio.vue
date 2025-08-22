@@ -15,7 +15,7 @@ onMounted(async () => {
 
 <template>
     <div class="content">
-        <h1 class="text-4xl font-medium mb-8">Portfolio</h1>
+        <PageHeading class="mb-8">Portfolio</PageHeading>
 
         <section class="flex flex-col gap-8" id="portfolio">
             <template v-for="post in [...(portfolioData || [])].reverse()">

@@ -4,6 +4,7 @@ useSeoMeta({
 });
 
 import emailjs from "@emailjs/browser";
+import PageHeading from "~/components/PageHeading.vue";
 
 const name = ref("");
 const email = ref("");
@@ -41,7 +42,7 @@ const handleSubmit = async (e) => {
 
 <template>
     <div class="content">
-        <h1 class="text-4xl font-medium mb-4">Contact me</h1>
+        <PageHeading>Contact me</PageHeading>
         <p class="mb-12">Any questions? Just give me a shout!</p>
 
         <section class="bg-zinc-900/80 p-6 sm:p-8 rounded-3xl" id="contact-form">

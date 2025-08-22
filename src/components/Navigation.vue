@@ -34,7 +34,7 @@ const toggleMenu = () => {
 
     <!-- Mobile nav -->
     <header
-        class="md:hidden flex justify-between items-center py-4 px-5 fixed w-full top-0 bg-[var(--background)]/80 backdrop-blur-md z-20"
+        class="md:hidden flex justify-between items-center py-6 px-5 fixed w-full top-0 bg-[var(--background)]/70 backdrop-blur-lg z-20 border-b border-white/5"
     >
         <NuxtLink to="/" class="text-2xl">AE</NuxtLink>
         <div class="cursor-pointer" @click="toggleMenu">
@@ -43,7 +43,7 @@ const toggleMenu = () => {
     </header>
 
     <div
-        class="fixed top-0 h-screen w-screen bg-[var(--background)] z-30 py-6 transition-all duration-300 ease-in-out"
+        class="fixed top-0 h-screen w-screen bg-[var(--background)]/70 backdrop-blur-2xl z-30 py-6 transition-all duration-300 ease-in-out"
         :style="{ left: isOpen ? '0' : '-110%' }"
     >
         <div class="content">
