@@ -20,12 +20,14 @@ const toggleMenu = () => {
 
         <ul class="flex gap-6">
             <li>
-                <a href="https://github.com/alexanderiksson">
+                <a href="https://github.com/alexanderiksson" title="Visit my Github">
                     <Icon icon="mdi:github" width="24" height="24" />
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/alexander-eriksson-302bb8237/"
+                <a
+                    href="https://www.linkedin.com/in/alexander-eriksson-302bb8237/"
+                    title="Visit my LinkedIn"
                     ><Icon icon="mdi:linkedin" width="24" height="24"
                 /></a>
             </li>
