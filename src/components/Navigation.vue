@@ -12,7 +12,7 @@ const toggleMenu = () => {
     >
         <NuxtLink to="/" class="text-2xl">AE</NuxtLink>
 
-        <ul class="flex flex-col gap-1 text-[22px] font-medium" role="navigation">
+        <ul class="flex flex-col gap-1 text-[22px] font-medium">
             <li><NuxtLink to="/">Home</NuxtLink></li>
             <li><NuxtLink to="/portfolio">Portfolio</NuxtLink></li>
             <li><NuxtLink to="/contact">Contact</NuxtLink></li>
