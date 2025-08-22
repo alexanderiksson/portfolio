@@ -9,4 +9,10 @@ export default defineNuxtConfig({
         plugins: [tailwindcss()],
     },
     srcDir: "src/",
+    runtimeConfig: {
+        contentfulAccessToken: process.env.NUXT_CONTENTFUL_ACCESS_TOKEN,
+        public: {
+            contentfulSpaceId: process.env.NUXT_PUBLIC_CONTENTFUL_SPACE_ID,
+        },
+    },
 });

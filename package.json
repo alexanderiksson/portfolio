@@ -12,7 +12,9 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@iconify/vue": "^5.0.0",
+    "@nuxtjs/dotenv": "^1.4.2",
     "@tailwindcss/vite": "^4.1.12",
+    "contentful": "^11.7.15",
     "nuxt": "^4.0.3",
     "tailwindcss": "^4.1.12",
     "vue": "^3.5.18",

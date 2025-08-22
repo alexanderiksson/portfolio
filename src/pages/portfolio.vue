@@ -1,15 +1,14 @@
 <script setup>
-import PortfolioCard from "~/components/PortfolioCard.vue";
-
 useSeoMeta({
     title: "Alexander Eriksson - Portfolio",
 });
 
-const portfolioData = ref(null);
-
-onMounted(async () => {
-    const response = await fetch("/portfolio/portfolio.json");
-    portfolioData.value = await response.json();
+const {
+    data: portfolioItems,
+    pending: loading,
+    error,
+} = await useAsyncData("portfolio", () => $fetch("/api/portfolio"), {
+    server: true,
 });
 </script>
 
@@ -18,8 +17,16 @@ onMounted(async () => {
         <PageHeading class="mb-8">Portfolio</PageHeading>
 
         <section class="flex flex-col gap-8" id="portfolio">
-            <template v-for="post in [...(portfolioData || [])].reverse()">
-                <PortfolioCard :data="post" />
+            <template v-if="loading">
+                <Loader />
+            </template>
+
+            <template v-else-if="error">
+                <p>Something went wrong</p>
+            </template>
+
+            <template v-else v-for="item in portfolioItems" :key="item.title">
+                <PortfolioCard :data="item" />
             </template>
         </section>
     </div>
