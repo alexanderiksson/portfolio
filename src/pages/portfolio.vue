@@ -9,6 +9,7 @@ const {
     error,
 } = await useAsyncData("portfolio", () => $fetch("/api/portfolio"), {
     server: true,
+    immediate: true,
 });
 </script>
 

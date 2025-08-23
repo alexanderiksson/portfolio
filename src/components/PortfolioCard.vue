@@ -18,11 +18,11 @@ defineProps({
             />
         </div>
         <div class="flex flex-col gap-4 sm:w-1/2 relative">
-            <h2 class="text-2xl font-medium text-center sm:text-left">{{ data.title }}</h2>
+            <h2 class="text-2xl font-medium text-center sm:text-left truncate">{{ data.title }}</h2>
             <div class="flex justify-center sm:justify-start gap-2 flex-wrap">
                 <div
                     v-for="tag in data.tags"
-                    class="text-sm bg-white/7 border-1 border-white/10 px-3 py-1 rounded-full flex items-center gap-1.5 text-neutral-200"
+                    class="text-sm bg-white/10 px-3 py-1 rounded-full flex items-center gap-1.5 text-neutral-200"
                 >
                     <img
                         :src="tag.fields.icon.fields.file.url"
