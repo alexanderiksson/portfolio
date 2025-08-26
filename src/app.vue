@@ -3,6 +3,12 @@ useHead({
     htmlAttrs: {
         lang: "sv",
     },
+    script: [
+        {
+            src: "https://scripts.simpleanalyticscdn.com/latest.js",
+            async: true,
+        },
+    ],
 });
 </script>
 
