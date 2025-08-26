@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="p-6 sm:p-8 flex flex-col sm:flex-row gap-8 sm:gap-12 bg-zinc-900/80 rounded-3xl">
+    <div class="p-6 sm:p-8 flex flex-col sm:flex-row gap-8 sm:gap-12 bg-zinc-700/25 rounded-4xl">
         <div class="flex justify-center items-center sm:w-1/2">
             <img
                 :src="data.image"

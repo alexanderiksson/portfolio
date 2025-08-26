@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" class="bg-zinc-900/80 p-8 rounded-3xl">
+    <section id="skills" class="bg-zinc-700/25 p-8 rounded-4xl">
         <h2 class="text-2xl font-medium mb-8">Techstack</h2>
         <div class="grid grid-cols-6 gap-x-4 gap-y-12">
             <div title="HTML">

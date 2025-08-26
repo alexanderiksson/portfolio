@@ -15,7 +15,7 @@ const {
 
 <template>
     <div class="content">
-        <PageHeading class="mb-8">Portfolio</PageHeading>
+        <PageHeading class="mb-10">Portfolio</PageHeading>
 
         <section class="flex flex-col gap-8" id="portfolio">
             <template v-if="loading">

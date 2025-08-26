@@ -11,11 +11,13 @@ const email = ref("");
 const message = ref("");
 
 const sending = ref(false);
+const statusMessage = ref("");
+const isSuccess = ref(false);
 
 const handleSubmit = async (e) => {
     e.preventDefault();
-
     sending.value = true;
+    statusMessage.value = "";
 
     try {
         await emailjs.send(
@@ -28,12 +30,14 @@ const handleSubmit = async (e) => {
             },
             "WZwgN1nzjJgqg5Wtu"
         );
-        alert("Message sent successfully!");
+        statusMessage.value = "Message sent successfully!";
+        isSuccess.value = true;
         name.value = "";
         email.value = "";
         message.value = "";
     } catch (error) {
-        alert("Failed to send message. Please try again later.");
+        statusMessage.value = "Failed to send message. Please try again later.";
+        isSuccess.value = false;
     }
 
     sending.value = false;
@@ -43,47 +47,49 @@ const handleSubmit = async (e) => {
 <template>
     <div class="content">
         <PageHeading>Contact me</PageHeading>
-        <p class="mb-12">Any questions? Just give me a shout!</p>
+        <p class="mb-16">Any questions? Just give me a shout!</p>
 
-        <form class="flex flex-col gap-8" @submit="handleSubmit">
-            <div class="flex flex-col gap-2">
-                <label for="name">Name</label>
+        <form class="flex flex-col gap-6" @submit="handleSubmit">
+            <div class="grid lg:grid-cols-2 gap-6">
                 <input
-                    class="p-3 rounded-xl border border-[var(--text)]/10 bg-black/50"
+                    class="p-3 rounded-xl border border-[var(--text)]/10 bg-zinc-900/30 placeholder:text-neutral-500"
                     type="text"
                     id="name"
                     name="name"
                     v-model="name"
                     required
                     :disabled="sending"
-                    placeholder="Your name"
+                    placeholder="Name"
                 />
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for="email">E-mail</label>
+
                 <input
-                    class="p-3 rounded-xl border border-[var(--text)]/10 bg-black/50"
+                    class="p-3 rounded-xl border border-[var(--text)]/10 bg-zinc-900/30 placeholder:text-neutral-500"
                     type="email"
                     id="email"
                     name="email"
                     v-model="email"
                     required
                     :disabled="sending"
-                    placeholder="Your email"
+                    placeholder="Email"
                 />
             </div>
-            <div class="flex flex-col gap-2">
-                <label for="message">Message</label>
-                <textarea
-                    class="p-3 rounded-xl border border-[var(--text)]/10 bg-black/50"
-                    name="message"
-                    id="message"
-                    rows="5"
-                    v-model="message"
-                    required
-                    :disabled="sending"
-                    placeholder="Your message"
-                ></textarea>
+
+            <textarea
+                class="p-3 rounded-xl border border-[var(--text)]/10 bg-zinc-900/30 placeholder:text-neutral-500"
+                name="message"
+                id="message"
+                rows="5"
+                v-model="message"
+                required
+                :disabled="sending"
+                placeholder="Message"
+            ></textarea>
+
+            <div
+                v-if="statusMessage"
+                :class="['p-4 rounded-xl', isSuccess ? 'bg-green-500/20' : 'bg-red-500/20']"
+            >
+                {{ statusMessage }}
             </div>
             <button type="submit" class="button" :disabled="sending">
                 {{ sending ? "Sending..." : "Send message" }}
