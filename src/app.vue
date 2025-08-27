@@ -1,4 +1,6 @@
 <script setup>
+import { Analytics } from "@vercel/analytics/nuxt";
+
 useHead({
     htmlAttrs: {
         lang: "sv",
@@ -13,8 +15,8 @@ useHead({
 </script>
 
 <template>
+    <Analytics />
     <NuxtLayout>
-        <Analytics />
         <NuxtPage />
     </NuxtLayout>
 </template>
