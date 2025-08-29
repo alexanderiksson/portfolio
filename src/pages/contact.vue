@@ -46,8 +46,7 @@ const handleSubmit = async (e) => {
 
 <template>
     <div class="content">
-        <PageHeading>Contact me</PageHeading>
-        <p class="mb-16">Any questions? Just give me a shout!</p>
+        <PageHeading class="mb-8">Contact me</PageHeading>
 
         <form class="flex flex-col gap-6" @submit="handleSubmit">
             <div class="grid lg:grid-cols-2 gap-6">

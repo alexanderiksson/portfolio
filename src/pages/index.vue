@@ -7,6 +7,5 @@ useSeoMeta({
 <template>
     <div class="content">
         <IntroSection />
-        <SkillsSection />
     </div>
 </template>
