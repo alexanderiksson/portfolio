@@ -91,7 +91,10 @@ const handleSubmit = async (e) => {
                 {{ statusMessage }}
             </div>
             <button type="submit" class="button" :disabled="sending">
-                {{ sending ? "Sending..." : "Send message" }}
+                <template v-if="sending">
+                    <Loader />
+                </template>
+                <span v-else>Send message</span>
             </button>
         </form>
     </div>
