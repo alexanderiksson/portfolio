@@ -20,7 +20,11 @@ const toggleMenu = () => {
 
         <ul class="flex gap-6">
             <li>
-                <a href="https://github.com/alexanderiksson" title="Visit my Github">
+                <a
+                    href="https://github.com/alexanderiksson"
+                    title="Visit my Github"
+                    target="_blank"
+                >
                     <Icon icon="mdi:github" width="24" height="24" />
                 </a>
             </li>
@@ -28,6 +32,7 @@ const toggleMenu = () => {
                 <a
                     href="https://www.linkedin.com/in/alexander-eriksson-302bb8237/"
                     title="Visit my LinkedIn"
+                    target="_blank"
                     ><Icon icon="mdi:linkedin" width="24" height="24"
                 /></a>
             </li>
@@ -36,7 +41,7 @@ const toggleMenu = () => {
 
     <!-- Mobile nav -->
     <header
-        class="md:hidden flex justify-between items-center py-6 px-5 fixed w-full top-0 bg-[var(--background)]/70 backdrop-blur-lg z-20 border-b border-white/5"
+        class="md:hidden flex justify-between items-center py-6 px-5 fixed w-full top-0 bg-[var(--background)]/80 backdrop-blur-xl z-20 border-b border-white/5"
     >
         <NuxtLink to="/" class="text-2xl">AE</NuxtLink>
         <div class="cursor-pointer" @click="toggleMenu">
@@ -45,12 +50,12 @@ const toggleMenu = () => {
     </header>
 
     <div
-        class="fixed top-0 h-screen w-screen bg-[var(--background)]/70 backdrop-blur-2xl z-30 py-6 transition-all duration-300 ease-in-out"
+        class="fixed top-0 h-screen w-screen bg-[var(--background)]/50 backdrop-blur-2xl z-30 py-6 transition-all duration-300 ease-in-out"
         :style="{ left: isOpen ? '0' : '-110%' }"
     >
         <div class="content">
             <div class="flex justify-end cursor-pointer mb-8" @click="toggleMenu">
-                <Icon icon="material-symbols-light:close-rounded" width="32" height="32" />
+                <Icon icon="material-symbols-light:close-rounded" width="32" height="32" class="" />
             </div>
             <nav class="absolute top-0 h-screen flex items-center">
                 <ul class="flex flex-col gap-8 text-3xl font-medium">
@@ -59,6 +64,27 @@ const toggleMenu = () => {
                     <li><NuxtLink @click="toggleMenu" to="/contact">Contact</NuxtLink></li>
                 </ul>
             </nav>
+            <div class="absolute bottom-4">
+                <ul class="flex gap-6">
+                    <li>
+                        <a
+                            href="https://github.com/alexanderiksson"
+                            title="Visit my Github"
+                            target="_blank"
+                        >
+                            <Icon icon="mdi:github" width="24" height="24" />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/alexander-eriksson-302bb8237/"
+                            title="Visit my LinkedIn"
+                            target="_blank"
+                            ><Icon icon="mdi:linkedin" width="24" height="24"
+                        /></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>

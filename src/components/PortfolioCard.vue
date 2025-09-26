@@ -36,7 +36,12 @@ defineProps({
 
             <p class="mb-16 text-center sm:text-left">{{ data.description }}</p>
 
-            <a v-if="data.githubURL" :href="data.githubURL" class="button absolute bottom-0 w-full">
+            <a
+                v-if="data.githubURL"
+                :href="data.githubURL"
+                class="button absolute bottom-0 w-full"
+                target="_blank"
+            >
                 View on <Icon icon="mdi:github" width="24" height="24" />
             </a>
         </div>
