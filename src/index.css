@@ -36,14 +36,16 @@ main {
     align-items: center;
     gap: 8px;
     background-color: var(--primary);
+    border: 2px solid var(--primary);
     color: white;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s ease-out;
     font-weight: 500;
 }
 
 .button:hover {
-    opacity: 0.8;
+    background-color: transparent;
+    color: var(--primary);
 }
